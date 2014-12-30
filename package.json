@@ -1,0 +1,21 @@
+{
+    "name": "iweather",
+    "version": "0.1.0",
+    "description": "get weather by shell",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "weather"
+    ],
+    "dependencies": {
+        "request": "~2",
+        "colors": "~0.6",
+        "lodash": "~2.4",
+        "public-ip": "~1",
+        "geoip-lite": "~1.1"
+    },
+    "author": "lcat <lcat@lcat.me>",
+    "license": "MIT"
+}

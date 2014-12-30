@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+var fs      = require("fs");
+var util    = require("../lib/util");
+var path    = require("path");
+var program = require('commander');
+
+var weather = require('../lib/index');
+
+program
+    .version(JSON.parse(fs.readFileSync(path.join(__dirname, "../package.json"))).version)
+    .option('-s --server [server]', 'optional, choose weather api server, default is yahoo')
+    .option('-l --location [location]', 'optional, eg. fuzhou or eg. 26.0614,119.3061')
+    .parse(process.argv);
+
+var server      = program.server || null;
+var location    = program.location || null;
+
+weather(server, location);
